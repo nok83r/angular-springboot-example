@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { UserService } from './services/user.service';
 
+import { FileUploadModule } from 'primeng/components/fileupload/fileupload';
+
 
 const appRoutes: Routes = [
   { path: 'crisis-center', component: LoginComponent },
@@ -34,7 +36,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    FileUploadModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
